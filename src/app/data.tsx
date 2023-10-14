@@ -1,4 +1,5 @@
 import { InstagramIcon } from "@/svgComponents/instagram";
+import { YoutubeIcon } from "@/svgComponents/youtube";
 import {
   AiFillFacebook,
   AiOutlineTwitter,
@@ -19,9 +20,9 @@ export type UserData = {
 
 export interface OverviewDataType {
   type: string;
-  count: number;
+  count: number | string;
   percentage: number;
-  icon: string;
+  icon: React.ReactNode;
 }
 
 const colors = {
@@ -59,7 +60,7 @@ export const data: UserData[] = [
   },
   {
     socialMediaName: "youtube",
-    icon: <AiOutlineYoutube />,
+    icon: <YoutubeIcon />,
     username: "Nathan F.",
     subscribers: 8239,
     todaySubscribers: -144,
@@ -67,53 +68,53 @@ export const data: UserData[] = [
   },
 ];
 
-const OverviewData: OverviewDataType[] = [
+export const OverviewData: OverviewDataType[] = [
   {
     type: "Page Views",
     count: 87,
     percentage: 3,
-    icon: "<Twitter/>",
+    icon: <AiFillFacebook className=" text-facebook-blue " />,
   },
   {
     type: "Likes",
     count: 52,
     percentage: 2,
-    icon: "<Twitter/>",
+    icon: <AiFillFacebook className=" text-facebook-blue " />,
   },
   {
     type: "Likes",
     count: 5462,
     percentage: 2257,
-    icon: "<Twitter/>",
+    icon: <InstagramIcon />,
   },
   {
     type: "Profile Views",
-    count: 52000,
+    count: "52K",
     percentage: 1375,
-    icon: "<Twitter/>",
+    icon: <InstagramIcon />,
   },
   {
     type: "Retweets",
     count: 117,
     percentage: 303,
-    icon: "<Twitter/>",
+    icon: <AiOutlineTwitter className=" text-twitter-blue " />,
   },
   {
     type: "Likes",
     count: 507,
     percentage: 553,
-    icon: "<Twitter/>",
+    icon: <AiOutlineTwitter className=" text-twitter-blue " />,
   },
   {
     type: "Likes",
     count: 107,
-    percentage: 19,
-    icon: "<Twitter/>",
+    percentage: -19,
+    icon: <YoutubeIcon />,
   },
   {
     type: "Total Views",
     count: 1407,
-    percentage: 12,
-    icon: "<Twitter/>",
+    percentage: -12,
+    icon: <YoutubeIcon />,
   },
 ];

@@ -3,43 +3,45 @@
 
 import { FollwersCard } from "@/components/FollwersCard";
 import Header from "@/components/Header";
-import { data } from "./data";
+import { OverviewData, data } from "./data";
 import OverviewCard from "@/components/OverviewCard";
+import { Container } from "@/components/Container";
 
 export default function Home() {
   return (
     <div>
       {/* top background */}
       <Background />
-      <main className="  mx-auto  min-h-screen w-full  max-w-7xl  px-4 pb-4 pt-8  md:px-8  ">
+      <main className=" mx-auto  min-h-screen w-full  max-w-7xl  px-4 pb-2 pt-8  md:px-8  ">
         <Header className="mb-10" />
         {/* follwers */}
-        <section className="gap mb-12 grid  grid-cols-1  place-items-center justify-center gap-4  transition-all md:grid-cols-2  md:gap-y-10  xl:grid-cols-4   ">
+        <Container>
           {data.map((d, i) => (
             <FollwersCard
               key={i}
-              icon={d.icon}
-              color={d.color}
-              username={d.username}
-              followers={d.followers}
-              subscribers={d.subscribers}
-              todaySubscribers={d.todaySubscribers}
-              todayFollowers={d.todayFollowers}
-              socialMediaName={d.socialMediaName}
+              {...d}
+              // icon={d.icon}
+              // color={d.color}
+              // username={d.username}
+              // followers={d.followers}
+              // subscribers={d.subscribers}
+              // todaySubscribers={d.todaySubscribers}
+              // todayFollowers={d.todayFollowers}
+              // socialMediaName={d.socialMediaName}
             />
           ))}
-        </section>
+        </Container>
 
         {/* Overview Today  */}
         <section>
-          <section className="gap mb-12 grid  grid-cols-1  place-items-center gap-4  transition-all md:grid-cols-2  md:gap-y-10  xl:grid-cols-4 ">
-            <h2 className="mb-8 text-2xl font-semibold text-dark-grayish-blue-text dark:text-white ">
-              Overview - Today{" "}
-            </h2>
-          </section>
-          <div className="gap mb-12 grid  grid-cols-1  place-items-center justify-center gap-4  transition-all md:grid-cols-2  md:gap-y-10  xl:grid-cols-4  ">
-            <OverviewCard />
-          </div>
+          <h2 className="mb-8 text-center text-2xl font-semibold text-dark-grayish-blue-text dark:text-white sm:text-start ">
+            Overview - Today
+          </h2>
+          <Container className="mb-4">
+            {OverviewData.map((d, i) => (
+              <OverviewCard {...d} key={i} />
+            ))}
+          </Container>
         </section>
       </main>
     </div>

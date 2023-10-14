@@ -47,7 +47,7 @@ export function FollwersCard(props: UserData) {
       {/* today data */}
       <section
         className={cn(
-          "flex items-center justify-center gap-1 font-semibold ",
+          "flex text-sm items-center justify-center gap-1 font-semibold ",
           todayFollwers >= 0 ? "text-lime-green" : "text-bright-red",
         )}
       >

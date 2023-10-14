@@ -2,7 +2,7 @@ import React from "react";
 
 export function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="20" height="20">
       <defs>
         <linearGradient id="a" x1="100%" x2="0%" y1="0%" y2="100%">
           <stop offset="0%" stop-color="#DF4896" />
