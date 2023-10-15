@@ -51,7 +51,7 @@ export default function Home() {
 function Background() {
   return (
     <div className="fixed left-0  top-0 -z-50  min-h-screen w-full  bg-white dark:bg-very-dark-blue-bg ">
-      <section className="h-[250px]   bg-very-pale-blue-top-bg-pattern dark:bg-very-dark-blue-top-bg-pattern " />
+      <section className="h-[250px]  rounded-b-2xl   bg-very-pale-blue-top-bg-pattern dark:bg-very-dark-blue-top-bg-pattern " />
       <section className=" h-full" />
     </div>
   );
