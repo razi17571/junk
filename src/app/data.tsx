@@ -37,7 +37,7 @@ export const data: UserData[] = [
   {
     socialMediaName: "facebook",
     icon: <AiFillFacebook />,
-    username: "@nathanf",
+    username: "@GeeksforGeeks",
     followers: 1987,
     todayFollowers: 12,
     color: colors["facebook-blue"],
@@ -45,7 +45,7 @@ export const data: UserData[] = [
   {
     socialMediaName: "twitter",
     icon: <AiOutlineTwitter />,
-    username: "@nathanf",
+    username: "@GeeksforGeeks",
     followers: 1044,
     todayFollowers: 99,
     color: colors["twitter-blue"],
@@ -53,7 +53,7 @@ export const data: UserData[] = [
   {
     socialMediaName: "instagram",
     icon: <InstagramIcon />,
-    username: "@realnathanf",
+    username: "@GeeksforGeeks",
     followers: "11K",
     todayFollowers: 1099,
     color: colors["instagram-gradient"],
@@ -61,7 +61,7 @@ export const data: UserData[] = [
   {
     socialMediaName: "youtube",
     icon: <YoutubeIcon />,
-    username: "Nathan F.",
+    username: "GeeksforGeeks",
     subscribers: 8239,
     todaySubscribers: -144,
     color: colors["youtube-red"],
